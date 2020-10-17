@@ -18,3 +18,6 @@ student_id（folder）
  
 # Submit your project
 [How to](./Submission-Howto.md)
+
+# Deadline
+## 2020-10-31
