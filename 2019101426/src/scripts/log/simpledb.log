@@ -1,0 +1,522 @@
+07:25:13 PM, Mon Oct 26, 2020 1 daemonize successfully~
+
+07:25:29 PM, Mon Oct 26, 2020 1 :get:default=>world
+
+07:26:52 PM, Mon Oct 26, 2020 1 daemonize successfully~
+
+07:27:00 PM, Mon Oct 26, 2020 1 :get:default=>world
+
+07:27:06 PM, Mon Oct 26, 2020 1 :set:default=>(OK)
+
+07:27:11 PM, Mon Oct 26, 2020 1 :repl:default=>(OK)
+
+07:33:00 PM, Mon Oct 26, 2020 1 :repl:default=>(OK)
+
+07:35:41 PM, Mon Oct 26, 2020 1 :repl:default=>(OK)
+
+07:35:46 PM, Mon Oct 26, 2020 1 :repl:default=>(OK)
+
+09:21:50 PM, Mon Oct 26, 2020 1 daemonize successfully~
+
+09:21:50 PM, Mon Oct 26, 2020 3 main: bind error
+09:31:54 PM, Mon Oct 26, 2020 1 daemonize successfully~
+
+09:31:54 PM, Mon Oct 26, 2020 3 main: bind error
+09:39:50 PM, Mon Oct 26, 2020 3 main: bind error
+09:40:17 PM, Mon Oct 26, 2020 1 sjk:login:=>login failed.
+
+09:41:21 PM, Mon Oct 26, 2020 1 simpledb:login:=>login failed.
+
+09:41:27 PM, Mon Oct 26, 2020 1 simpledb:login:=>login failed.
+
+09:43:08 PM, Mon Oct 26, 2020 1 jdlk:login:=>login failed.
+
+09:43:18 PM, Mon Oct 26, 2020 1 simpledb:login:=>login failed.
+
+09:43:23 PM, Mon Oct 26, 2020 1 simpledb:login:=>login failed.
+
+09:45:47 PM, Mon Oct 26, 2020 3 main: bind error
+09:46:55 PM, Mon Oct 26, 2020 1 ssd:login:=>login failed.
+
+09:47:05 PM, Mon Oct 26, 2020 1 simpledb:login:=>login succeed.
+
+09:48:45 PM, Mon Oct 26, 2020 1 simpledb:login:=>login succeed.
+
+09:52:14 PM, Mon Oct 26, 2020 1 djskl:login:=>login failed.
+
+09:52:21 PM, Mon Oct 26, 2020 1 djskl:login:=>login failed.
+
+09:53:29 PM, Mon Oct 26, 2020 1 jsdk:login:=>login failed.
+
+09:53:32 PM, Mon Oct 26, 2020 1 jsdk:login:=>login failed.
+
+09:53:38 PM, Mon Oct 26, 2020 1 djs:login:=>login failed.
+
+09:53:46 PM, Mon Oct 26, 2020 1 simpledb:login:=>login succeed.
+
+09:54:57 PM, Mon Oct 26, 2020 1 simpledb:login:=>login succeed.
+
+09:55:06 PM, Mon Oct 26, 2020 1 simpledb:login:=>login succeed.
+
+09:55:19 PM, Mon Oct 26, 2020 1 simpledb:get:default=>(WARN) key not exist.
+
+09:55:24 PM, Mon Oct 26, 2020 1 simpledb:set:default=>(OK)
+
+09:55:27 PM, Mon Oct 26, 2020 1 simpledb:get:default=>world
+
+09:55:35 PM, Mon Oct 26, 2020 1 simpledb:get:default=>world
+
+10:11:26 PM, Mon Oct 26, 2020 1 simpledb:login:=>login succeed.
+
+10:11:30 PM, Mon Oct 26, 2020 1 simpledb:get:default=>world
+
+10:11:33 PM, Mon Oct 26, 2020 1 simpledb:set:default=>(OK)
+
+10:11:43 PM, Mon Oct 26, 2020 1 simpledb:repl:default=>(OK)
+
+10:11:46 PM, Mon Oct 26, 2020 1 simpledb:get:default=>jack
+
+10:11:55 PM, Mon Oct 26, 2020 1 simpledb:get:default=>jack
+
+12:08:19 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+12:08:25 PM, Tue Oct 27, 2020 1 simpledb:get:default=>jack
+
+12:08:35 PM, Tue Oct 27, 2020 1 simpledb:use:market=>table has changed to market
+
+12:08:52 PM, Tue Oct 27, 2020 1 simpledb:use:yeyey=>table has changed to yeyey
+
+03:23:24 PM, Tue Oct 27, 2020 1 simpledb:use:yeyey=>table has changed to yeyey
+
+03:29:05 PM, Tue Oct 27, 2020 3 main: bind error
+03:36:08 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+03:36:13 PM, Tue Oct 27, 2020 1 simpledb:use:hello=>table has changed to hello
+
+03:36:48 PM, Tue Oct 27, 2020 1 simpledb:use:hello=>table has changed to hello
+
+03:42:50 PM, Tue Oct 27, 2020 3 main: bind error
+03:43:47 PM, Tue Oct 27, 2020 3 main: bind error
+03:46:05 PM, Tue Oct 27, 2020 3 main: bind error
+03:46:55 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+03:47:00 PM, Tue Oct 27, 2020 1 simpledb:use:market=>table change fail.
+
+03:50:05 PM, Tue Oct 27, 2020 1 simpledb:use:market=>table change fail.
+
+03:50:29 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+03:50:32 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table has changed to default
+
+03:50:41 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table has changed to default
+
+03:52:16 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+03:52:19 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table has changed to default
+
+03:52:26 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table has changed to default
+
+03:59:08 PM, Tue Oct 27, 2020 3 main: bind error
+04:00:47 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+04:00:54 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table has changed to default
+
+04:01:05 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table has changed to default
+
+04:03:35 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+04:03:39 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+04:11:31 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+06:16:20 PM, Tue Oct 27, 2020 3 main: bind error
+06:21:32 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+06:21:40 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+06:25:45 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+06:26:08 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+06:34:09 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+06:34:14 PM, Tue Oct 27, 2020 1 flag0
+06:38:26 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+06:38:37 PM, Tue Oct 27, 2020 1 hello
+06:42:29 PM, Tue Oct 27, 2020 1 hello
+06:42:29 PM, Tue Oct 27, 2020 1 flag2
+06:42:29 PM, Tue Oct 27, 2020 1 flag4
+06:42:29 PM, Tue Oct 27, 2020 1 :ctable:default=>create table successfully.
+06:42:36 PM, Tue Oct 27, 2020 1 :use:default=>table change fail.
+
+06:42:40 PM, Tue Oct 27, 2020 1 :use:default=>table change fail.
+
+06:47:33 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+06:47:37 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+06:47:41 PM, Tue Oct 27, 2020 1 hello
+06:47:41 PM, Tue Oct 27, 2020 1 flag1
+06:47:41 PM, Tue Oct 27, 2020 1 simpledb:ctable:default=>table has already existed
+06:52:09 PM, Tue Oct 27, 2020 1 hello
+06:52:09 PM, Tue Oct 27, 2020 1 flag1
+06:52:09 PM, Tue Oct 27, 2020 1 simpledb:ctable:default=>table has already existed
+06:54:01 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+06:54:08 PM, Tue Oct 27, 2020 1 hello
+06:54:08 PM, Tue Oct 27, 2020 1 simpledb:ctable:default=>table has already existed.
+
+06:54:39 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+06:59:19 PM, Tue Oct 27, 2020 3 main: bind error
+06:59:40 PM, Tue Oct 27, 2020 3 main: bind error
+07:00:02 PM, Tue Oct 27, 2020 3 main: bind error
+07:02:08 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:02:12 PM, Tue Oct 27, 2020 1 hello
+07:02:12 PM, Tue Oct 27, 2020 1 simpledb:ctable:default=>table has already existed.
+
+07:02:23 PM, Tue Oct 27, 2020 1 market
+07:02:23 PM, Tue Oct 27, 2020 1 simpledb:ctable:default=>create table successfully.
+07:02:29 PM, Tue Oct 27, 2020 1 market
+07:02:29 PM, Tue Oct 27, 2020 1 simpledb:ctable:default=>table has already existed.
+
+07:02:35 PM, Tue Oct 27, 2020 1 1, simpledb 1 1 1 1 market
+
+07:02:35 PM, Tue Oct 27, 2020 1 flag1
+07:02:35 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:02:39 PM, Tue Oct 27, 2020 1 1, simpledb 1 1 1 1 market
+
+07:02:39 PM, Tue Oct 27, 2020 1 flag1
+07:02:39 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:05:20 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:05:28 PM, Tue Oct 27, 2020 1 hello
+07:05:28 PM, Tue Oct 27, 2020 1 simpledb:ctable:default=>table has already existed.
+
+07:05:34 PM, Tue Oct 27, 2020 1 flag2
+07:05:34 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:05:41 PM, Tue Oct 27, 2020 1 flag2
+07:05:41 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:10:22 PM, Tue Oct 27, 2020 3 main: bind error
+07:11:34 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:11:41 PM, Tue Oct 27, 2020 1 1 simpledb 1 1 1 1 hello
+
+07:11:41 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:19:43 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:19:47 PM, Tue Oct 27, 2020 1 1 simpledb 1 1 1 1 hello
+
+07:19:47 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:19:49 PM, Tue Oct 27, 2020 1 1 simpledb 1 1 1 1 hello
+
+07:19:49 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:21:24 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:21:28 PM, Tue Oct 27, 2020 1 1 simpledb 1 1 1 1 hello
+
+07:21:28 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:21:29 PM, Tue Oct 27, 2020 1 1 simpledb 1 1 1 1 hello
+
+07:21:29 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:25:51 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:25:58 PM, Tue Oct 27, 2020 1 hello
+07:25:58 PM, Tue Oct 27, 2020 1 simpledb:ctable:default=>table has already existed.
+
+07:26:03 PM, Tue Oct 27, 2020 1 1 simpledb 1 1 1 1 hello
+
+07:26:03 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:31:55 PM, Tue Oct 27, 2020 3 main: bind error
+07:33:06 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:33:10 PM, Tue Oct 27, 2020 1 1 simpledb 1 1 1 1 hello
+
+07:33:10 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:33:13 PM, Tue Oct 27, 2020 1 1 simpledb 1 1 1 1 hello
+
+07:33:13 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:34:36 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:34:41 PM, Tue Oct 27, 2020 1 world
+07:34:41 PM, Tue Oct 27, 2020 1 simpledb:ctable:default=>create table successfully.
+07:37:56 PM, Tue Oct 27, 2020 1 world
+07:37:56 PM, Tue Oct 27, 2020 1 simpledb:ctable:default=>table has already existed.
+
+07:39:17 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:39:23 PM, Tue Oct 27, 2020 1 simpledb:ctable:default=>table has already existed.
+
+07:39:28 PM, Tue Oct 27, 2020 1 flag1
+07:39:28 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:41:31 PM, Tue Oct 27, 2020 3 main: bind error
+07:44:59 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:45:04 PM, Tue Oct 27, 2020 1 flag1
+07:45:04 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:45:06 PM, Tue Oct 27, 2020 1 flag1
+07:45:06 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:46:49 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:46:54 PM, Tue Oct 27, 2020 1 flag2
+07:46:54 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:46:59 PM, Tue Oct 27, 2020 1 flag1
+07:46:59 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:47:02 PM, Tue Oct 27, 2020 1 flag1
+07:47:02 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:49:57 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:50:21 PM, Tue Oct 27, 2020 1 flag1
+07:50:21 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:53:12 PM, Tue Oct 27, 2020 3 main: bind error
+07:54:43 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:54:50 PM, Tue Oct 27, 2020 1 ffffflag0
+07:54:50 PM, Tue Oct 27, 2020 1 bits: 1 1 1 1 15
+
+07:54:50 PM, Tue Oct 27, 2020 1 ffffflag1
+07:54:50 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:54:51 PM, Tue Oct 27, 2020 1 ffffflag0
+07:54:51 PM, Tue Oct 27, 2020 1 bits: 1 1 1 1 15
+
+07:54:51 PM, Tue Oct 27, 2020 1 ffffflag1
+07:54:51 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table change fail.
+
+07:58:22 PM, Tue Oct 27, 2020 1 simpledb:login:=>login succeed.
+
+07:58:27 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table has changed to hello
+
+07:58:33 PM, Tue Oct 27, 2020 1 simpledb:use:hello=>table has changed to default
+
+07:58:39 PM, Tue Oct 27, 2020 1 simpledb:use:default=>table has changed to hello
+
+07:58:45 PM, Tue Oct 27, 2020 1 simpledb:set:hello=>(OK)
+
+07:58:50 PM, Tue Oct 27, 2020 1 simpledb:set:hello=>(OK)
+
+03:25:05 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+03:25:21 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>user not exist OR grant to yourself fail.
+
+03:25:27 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>user not exist OR grant to yourself fail.
+
+03:30:17 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+03:30:40 PM, Wed Oct 28, 2020 3 
+03:30:40 PM, Wed Oct 28, 2020 3 simpledb
+03:30:40 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>user not exist OR grant to yourself fail.
+
+03:30:45 PM, Wed Oct 28, 2020 3 
+03:30:45 PM, Wed Oct 28, 2020 3 simpledb
+03:30:45 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>user not exist OR grant to yourself fail.
+
+03:34:58 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+03:35:03 PM, Wed Oct 28, 2020 1 simpledb:get:default=>(WARN) key not exist.
+
+03:35:34 PM, Wed Oct 28, 2020 1 simpledb:set:default=>(OK)
+
+03:35:38 PM, Wed Oct 28, 2020 1 simpledb:get:default=>world
+
+03:38:26 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+03:38:40 PM, Wed Oct 28, 2020 3 sjsjs
+03:38:40 PM, Wed Oct 28, 2020 3 simpledb
+03:38:40 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>user not exist OR grant to yourself fail.
+
+03:38:58 PM, Wed Oct 28, 2020 1 simpledb:use:default=>table has changed to market
+
+03:43:00 PM, Wed Oct 28, 2020 1 simpledb:grant:market=>table not exist.
+
+03:54:46 PM, Wed Oct 28, 2020 1 simpledb:grant:market=>table not exist.
+
+03:55:39 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+03:56:00 PM, Wed Oct 28, 2020 1 simpledb:ctable:default=>create table successfully.
+
+03:56:09 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+03:56:11 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+03:58:59 PM, Wed Oct 28, 2020 3 main: bind error
+04:00:32 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+04:00:39 PM, Wed Oct 28, 2020 1 simpledb:ctable:default=>create table successfully.
+
+04:00:50 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+04:00:53 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+04:05:01 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+04:05:10 PM, Wed Oct 28, 2020 3 flag2
+
+04:05:10 PM, Wed Oct 28, 2020 3 flag1
+
+04:05:10 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+04:05:11 PM, Wed Oct 28, 2020 3 flag2
+
+04:05:11 PM, Wed Oct 28, 2020 3 flag1
+
+04:05:11 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+04:07:21 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+04:07:34 PM, Wed Oct 28, 2020 3 maple
+04:07:34 PM, Wed Oct 28, 2020 3 simpledb
+04:07:34 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>user not exist OR grant to yourself fail.
+
+04:10:49 PM, Wed Oct 28, 2020 3 maple
+04:10:49 PM, Wed Oct 28, 2020 3 simpledb
+04:10:49 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>user not exist OR grant to yourself fail.
+
+04:11:27 PM, Wed Oct 28, 2020 1 simpledb:login:=>login failed.
+
+04:11:37 PM, Wed Oct 28, 2020 1 simpledb:login:=>login failed.
+
+04:11:38 PM, Wed Oct 28, 2020 1 simpledb:login:=>login failed.
+
+04:15:35 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+04:16:24 PM, Wed Oct 28, 2020 3 flag2
+
+04:16:24 PM, Wed Oct 28, 2020 3 flag1
+
+04:16:24 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+04:16:26 PM, Wed Oct 28, 2020 3 n is not right
+
+04:20:02 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+04:20:10 PM, Wed Oct 28, 2020 3 flag2
+
+04:20:10 PM, Wed Oct 28, 2020 3 flag1
+
+04:20:10 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+04:20:12 PM, Wed Oct 28, 2020 3 n is not right
+
+04:33:11 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+04:33:39 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+04:36:13 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+04:36:25 PM, Wed Oct 28, 2020 3 flag1
+
+04:36:25 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+04:36:27 PM, Wed Oct 28, 2020 3 n is not right
+
+04:43:55 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+04:44:08 PM, Wed Oct 28, 2020 3 n is not right
+
+04:44:56 PM, Wed Oct 28, 2020 3 main: bind error
+04:53:03 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+04:53:28 PM, Wed Oct 28, 2020 3 flag1
+
+04:53:28 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+04:53:30 PM, Wed Oct 28, 2020 3 flag-1
+
+04:53:30 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+04:53:54 PM, Wed Oct 28, 2020 1 maple:login:=>login succeed.
+
+04:53:59 PM, Wed Oct 28, 2020 1 maple:use:default=>table has changed to market
+
+04:54:08 PM, Wed Oct 28, 2020 1 maple:set:market=>(OK)
+
+04:54:51 PM, Wed Oct 28, 2020 1 maple:use:market=>table change fail.
+
+05:03:47 PM, Wed Oct 28, 2020 1 maple:use:market=>table change fail.
+
+05:05:55 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+05:06:05 PM, Wed Oct 28, 2020 3 flag-1
+
+05:06:05 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+05:06:12 PM, Wed Oct 28, 2020 3 flag-1
+
+05:06:12 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+05:06:35 PM, Wed Oct 28, 2020 1 maple:login:=>login succeed.
+
+05:06:39 PM, Wed Oct 28, 2020 1 maple:get:default=>world
+
+05:06:43 PM, Wed Oct 28, 2020 1 maple:set:default=>(OK)
+
+05:06:47 PM, Wed Oct 28, 2020 1 maple:repl:default=>(OK)
+
+05:06:51 PM, Wed Oct 28, 2020 1 maple:get:default=>haha
+
+05:09:01 PM, Wed Oct 28, 2020 1 maple:get:default=>haha
+
+05:09:04 PM, Wed Oct 28, 2020 1 maple:get:default=>haha
+
+05:11:05 PM, Wed Oct 28, 2020 1 maple:login:=>login succeed.
+
+05:11:24 PM, Wed Oct 28, 2020 1 maple:login:=>login succeed.
+
+05:11:52 PM, Wed Oct 28, 2020 1 maple:login:=>login succeed.
+
+05:15:00 PM, Wed Oct 28, 2020 1 maple:login:=>login succeed.
+
+05:15:12 PM, Wed Oct 28, 2020 1 maple:login:=>login succeed.
+
+05:15:18 PM, Wed Oct 28, 2020 1 maple:login:=>login succeed.
+
+05:18:36 PM, Wed Oct 28, 2020 1 maple:login:=>login succeed.
+
+05:18:41 PM, Wed Oct 28, 2020 1 maple:use:default=>table has changed to market
+
+05:18:51 PM, Wed Oct 28, 2020 1 maple:repl:market=>(OK)
+
+05:19:13 PM, Wed Oct 28, 2020 1 maple:repl:market=>(OK)
+
+06:31:02 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+06:31:11 PM, Wed Oct 28, 2020 3 flag-1
+
+06:31:11 PM, Wed Oct 28, 2020 1 simpledb:revoke:default=>revoke access successfully.
+
+06:31:21 PM, Wed Oct 28, 2020 1 simpledb:revoke:default=>table not exist.
+
+06:31:26 PM, Wed Oct 28, 2020 1 simpledb:revoke:default=>table not exist.
+
+06:38:33 PM, Wed Oct 28, 2020 1 simpledb:login:=>login succeed.
+
+06:38:42 PM, Wed Oct 28, 2020 3 flag-1
+
+06:38:42 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
+06:49:28 PM, Wed Oct 28, 2020 3 flag-1
+
+06:49:28 PM, Wed Oct 28, 2020 1 simpledb:grant:default=>grant access successfully.
+
