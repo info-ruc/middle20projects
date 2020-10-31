@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lgy.hotel.dao.RoomTypeMapper">
+	
+	<resultMap type="RoomType" id="roomTypeRM" autoMapping="true">
+		<id column="type_id" property="typeId"/>
+	</resultMap>
+	
+	<select id="findAllType" resultMap="roomTypeRM">
+		select * from tb_roomtype
+	</select>
+	
+	<select id="findTypeNameById" resultMap="roomTypeRM">
+	select * from tb_roomtype where type_id = #{roomTypeId}
+	</select>
+</mapper>
