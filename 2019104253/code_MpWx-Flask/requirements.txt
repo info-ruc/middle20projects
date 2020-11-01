@@ -1,0 +1,4 @@
+flask
+gevent
+pillow
+sqlalchemy==1.2.19

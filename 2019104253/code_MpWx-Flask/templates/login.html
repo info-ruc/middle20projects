@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% block title %}登录{% endblock %}
+{% block style %}
+    <style>
+        .m-b20{margin-bottom: 20px}
+    </style>
+{% endblock %}
+{% block subheader %}
+    登录和注册
+{% endblock %}
+{% block main %}
+    <div class="row m-b20">
+        <div class="col-md-6" role="navigation">
+            <ul class="nav nav-tabs">
+                <li role="presentation"  class="active"><a data-key="login">登录</a></li>
+                <li role="presentation"><a data-key="register">注册</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 这是登录页的div -->
+    <div class="row m-b20 login" style="display: block">
+        <div class="col-md-6">  <!-- 居中 加上这个 col-md-offset-3 -->
+            <div class="card">
+                <div class="card-header">
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                    <h4 style="color:red;text-align:center;">{{ message }}</h4>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <div class="card-body">
+                    <form id="login_form">
+                        <!--div class="form-group">
+                            <label class="radio-inline radio-primary label-radio">
+                                <input type="radio" name="log_e" value="0" checked><span>用户登录</span>
+                            </label>
+                            <label class="radio-inline radio-primary label-radio">
+                                <input type="radio" name="log_e" value="1"><span>公众号登录</span>
+                            </label>
+                        </div-->
+                        <div class="form-group">
+                            <label for="log_email">邮箱</label>
+                            <input class="form-control" type="email" id="log_email" name="log_email" required="required"
+                                   placeholder="请输入邮箱地址...">
+                        </div>
+                        <div class="form-group">
+                            <label for="log_pwd">密码</label>
+                            <input class="form-control" type="password" id="log_pwd" required="required"
+                                   name="log_pwd" placeholder="请输入密码..." autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-block btn-success" type="button" id="login">登录</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- 这是注册页的div -->
+    <div class="row m-b20 register" style="display: none">
+        <div class="col-md-6">  <!-- 居中 加上这个 col-md-offset-3 -->
+            <div class="card">
+                <div class="card-header">
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                    <h4 style="color:red;text-align:center;">{{ message }}</h4>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </div>
+                <div class="card-body">
+                    <form id="reg_form">
+                        <div class="form-group">
+                            <label class="radio-inline radio-primary label-radio">
+                                <input type="radio" name="reg_e" value="0" checked><span>用户注册</span>
+                            </label>
+                            <label class="radio-inline radio-primary label-radio">
+                                <input type="radio" name="reg_e" value="1"><span>公众号注册</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg_email">邮箱</label>
+                            <input class="form-control" type="email" id="reg_email" name="reg_email" required="required"
+                                   placeholder="请输入邮箱地址...">
+                        </div>
+                        <div class="form-group" id="reg_head_div" style="display: none">
+                            <label for="reg_head">头像(格式jpg,png,jpeg.像素小于100*100,文件大小小于1MB)</label>
+                            <input type="file" accept=".jpeg,.png,.jpg"  id="reg_head" value="" name="reg_head"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg_nick">昵称</label>
+                            <input class="form-control" type="text" id="reg_nick" name="reg_nick" required="required"
+                                   placeholder="请输入昵称..." maxlength="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <input class="form-control" type="password" id="reg_pwd" required="required"
+                                   name="reg_pwd" placeholder="请输入密码...长度6-20" autocomplete="off" minlength="6" maxlength="20">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">确认密码</label>
+                            <input class="form-control" type="password" id="reg_conpwd" required="required"
+                                   name="reg_conpwd" placeholder="请输入密码..." autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-block btn-success" type="button" id="regisetr">注册</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block js%}
+<script>
+    var re = /[0-9.a-z]{1,26}@[0-9.a-z]{1,20}\.[0-9a-z]{2,8}/g;
+
+    //注册和登录界面的切换
+    $("a").click(function(){
+        var tab_div;
+        $("a").each(function(){
+            $(this).parent().removeClass("active");
+            tab_div = String.format(".{0}", $(this).attr("data-key"));
+            $(tab_div).hide();
+        });
+        $(this).parent().addClass("active");
+        tab_div = String.format(".{0}", $(this).attr("data-key"));
+        $(tab_div).show();
+    });
+
+    //用户注册和作者注册 隐藏和显示 上传头像
+    $('input[name="reg_e"]').click(function () {
+        if ($(this).val()=="1"){
+            $('#reg_head_div').show();
+        }else {
+            $('#reg_head_div').hide();
+        }
+    });
+
+    //用户和公众号注册提交函数
+    $('#regisetr').click(function () {
+        //表单验证
+        if ($('#reg_pwd').val() != $('#reg_conpwd').val()){
+            alert("两次输入的密码不一致!");
+            return false
+        }
+        re = /[0-9.a-z]{1,26}@[0-9.a-z]{1,20}\.[0-9a-z]{2,8}/g;
+        if (!re.exec($('#reg_email').val())){
+            alert("注册邮箱格式不正确!");
+            return false
+        }
+        if ($('#reg_pwd').val().trim()=="" || $('#reg_nick').val().trim()==""){
+            alert("注册密码和昵称不可为空!");
+            return false
+        }
+        if ($('#reg_pwd').val().trim().length< 6 || $('#reg_nick').val().trim().length < 2){
+            alert("注册密码和昵称长度不够!");
+            return false
+        }
+
+        var fd = new FormData(document.querySelector("form#reg_form"));
+
+        $.ajax({ //post也可
+            url: ServerUrl + 'login/register',
+            type: "POST",
+            dataType: 'json',
+            data: fd,
+            processData: false,  // 不处理数据
+            contentType: false,   // 不设置内容类型
+            success: function(result){
+                console.log(result);
+                //对于获取的数据执行相关的操作，如：绑定、显示等
+                if (result["code"] == "0"){
+                    alert(result["msg"]);
+                }else {
+                    alert("注册成功!请登录!");
+                    $('a[data-key="register"]').parent().removeClass("active");
+                    $('a[data-key="login"]').parent().addClass("active");
+                    $('.register').hide();
+                    $('.login').show();
+                }
+            }
+        });
+    });
+
+    //用户登录
+    $('#login').click(function () {
+        //表单验证
+        console.log($('#log_email').val());
+        re = /[0-9.a-z]{1,26}@[0-9.a-z]{1,20}\.[0-9a-z]{2,8}/g;
+        if (!re.exec($('#log_email').val())){
+            alert("登录邮箱格式不正确!");
+            return false
+        }
+        if ($('#log_pwd').val().trim()==""){
+            alert("登录密码不可为空!");
+            return false
+        }
+        if ($('#log_pwd').val().trim().length< 6){
+            alert("登录密码长度不够!");
+            return false
+        }
+        $.post(ServerUrl + "login/login",$('#login_form').serialize(),function(result){
+        if (result['code']=="1"){
+            //window.location.reload();
+            if (result['utype']=="1"){
+                window.location.href = "/articlemanage"
+            }else {
+                window.location.href = "/mplist"
+            }
+        }else {
+            alert(result['msg']);
+        }
+        });  //"json"
+    });
+</script>
+{% endblock %}
