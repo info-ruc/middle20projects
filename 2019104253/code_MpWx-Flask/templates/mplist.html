@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}公众号列表{% endblock %}
+{% block style %}
+    <style>
+        .media_b_w{width: 82%}
+        .media_b_b{border-bottom: 1px solid #EEEEEE; padding-bottom: 10px}
+    </style>
+{% endblock %}
+{% block subheader %}
+    公众号列表
+{% endblock %}
+{% block main %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-12">
+                    {% for i in mps %}
+                    <div class="media media_b_b">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object img-circle"
+                                     {% if i.head %}
+                                     src="/static/head/{{ i.head }}"
+                                     {% else %}
+                                     src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNzFkOGRjM2EyMyB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE3MWQ4ZGMzYTIzIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy4xNzE4NzUiIHk9IjM2LjUiPjY0eDY0PC90ZXh0PjwvZz48L2c+PC9zdmc+"
+                                     {% endif %}
+                                    width="64" height="64"
+                                     alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body media_b_w">
+                            <h4 class="media-heading"><b><a href="/articlelist/{{ i.id }}">{{ i.nick }}</a></b></h4>
+                            <span>{% if i.title %}{{ i.title }}{% else %}该公众号没有发表过文章{% endif %}</span>
+                        </div>
+                        <div class="media-right media-top" style="width: 130px">{% if i.b_time %}{{ i.b_time }}{% else %}无{% endif %}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+{% endblock %}

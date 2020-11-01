@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% block title %}文章详情{% endblock %}
+{% block style %}
+    <style>
+        .date_w{width: 120px}
+        .media_b_w{width: 80%}
+        .media_b_b{border-bottom: 1px solid #EEEEEE; padding-bottom: 10px}
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .repcomment {
+            display: none;
+        }
+        .comment-body:hover > .repcomment {
+            display: block;
+        }
+
+    </style>
+{% endblock %}
+{% block subheader %}
+    文章详情
+{% endblock %}
+{% block main %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title" id="title" title-id="{{ a.id }}">{{ a.title }}</h3>
+        </div>
+        <div class="panel-body">
+            <div class="panel panel-success">
+                <div class="panel-body">
+                    <div class="left">{{ a.user.nick }}</div>
+                    <div class="right">
+                        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                        &nbsp;{{ a.b_time }}
+                        &emsp;<span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                        &nbsp;<a href="#comments">评论</a>&nbsp;<span class="badge">{{ c }}</span>
+                        &emsp;<span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                        &nbsp;<a href="#like">点赞</a>&nbsp;<span class="badge">{{ a.b_like }}</span>
+                        &emsp;<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                        &nbsp;阅读&nbsp;<span class="badge">{{ a.b_read }}</span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="panel panel-danger">
+                <div class="panel-body">
+                    <div>{% if a.source %}以下文章来源于: 《{{ a.source }}》{% else %}原创文章{% endif %}</div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <!-- 绿 success #dff0d8  红danger #f2dede  蓝info #d9edf7 黄warning #fcf8e3-->
+                    <div class="jumbotron" style="background-color: {{ a.template |get_tmp_color(0) }}">
+                        <h2>{{ a.title }}</h2>
+                        <p><pre>{{ a.b_desc }}</pre></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="thumbnail" style="background-color: {{ a.template |get_tmp_color(1) }};">
+                                {% if a.b_img %}
+                                <img src="/static/img/{{ a.b_img }}" alt="...">
+                                {% endif %}
+                                <div class="caption">
+                                    <p>
+                                        <pre style="background-image: url('/static/bg/bg{{ a.template }}.jpg');background-size: 100% ">{{ a.body }}</pre>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-warning" style="display: block" id="create-comment">
+                <div class="panel-body">
+                    <form class="form-inline">
+                    <div class="form-group">
+                        <textarea rows="1" name="cm_body" id="comment-body" placeholder="评论内容" cols="100"
+                                  class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <span  class="form-control"><img src="/getCode" onclick="loadcode(this)" style="vertical-align: top"> </span>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="comment-code" id="comment-code" placeholder="验证码" class="input-sm" style="width: 80px">
+                    </div>
+                    <button type="button" class="btn btn-info btn-sm" id="submitcom"> 提&emsp;交 </button>
+                    </form>
+                </div>
+            </div>
+            <div class="panel panel-default comments" id="comments">
+                <div class="panel-heading">
+                    <div class="pull-left" ><button class="btn btn-primary" type="button">评论</button></div>
+                    <div class="pull-right">
+                        <button class="btn btn-primary" type="button" id="like"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-body">
+                    {% for i in a.a2c %}
+                    <div class="panel panel-default comment-body">
+                        <div class="panel-body">
+                            <div><span>{{ i.c_time }}</span> <span>{{ i.c_nick }}</span></div>
+                            <div style="padding-left: 30px"><span class="bg-warning">{{ i.c_body }}</span></div>
+                        </div>
+                        {% if i.c_rebody %}
+                        <div class="panel-footer">
+                            <div style="padding-left: 30px"><span class="bg-info">作者：{{ i.c_rebody }}</span></div>
+                            <div style="text-align: right">{{ i.c_retime }}</div>
+                        </div>
+                        {% else %}
+                        {% if a.user.id == session.id %}
+                        <div class="panel-footer repcomment">
+                            <div class="pull-left"><input type="text" placeholder="请输入回复内容" data-id="{{ i.id }}"></div>
+                            <div class="pull-right"><input type="button" value="回复" class="rep"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+<script>
+    //点赞jaxa
+     $('#like').click(function () {
+         var data = {'id': $('#title').attr("title-id")};
+         $.post(ServerUrl + "like",data,function(result){
+            if (result['code']=="1"){
+                alert("点赞成功!");
+                $('#like').attr("disabled", "disabled");
+            }else {
+                alert(result['msg']);
+            }
+            });
+     });
+    //评论ajax
+     $('#submitcom').click(function () {
+         if ($('#comment-code').val()=="" || $('#comment-body').val().trim()==""){
+             alert("评论内容和验证码不能为空!");
+             return false
+         }
+         var data = {'id': $('#title').attr("title-id"), "code": $('#comment-code').val(), "body": $('#comment-body').val().trim()};
+         $.post(ServerUrl + "comment",data,function(result){
+            if (result['code']=="1"){
+                alert("评论成功!");
+                window.location.reload();
+            }else {
+                alert(result['msg']);
+            }
+            });
+     });
+    //回复评论
+    $(".rep").click(function () {
+        var rebody = $(this).parent().prev().children()[0];
+        if ($(rebody).val().trim() == ""){
+            alert("回复内容不可为空哦!");
+            return false
+        }
+        var data = {'id': $(rebody).attr("data-id"), "body": $(rebody).val().trim()};
+        $.post(ServerUrl + "recomment",data,function(result){
+            if (result['code']=="1"){
+                alert("回复成功!");
+                window.location.reload();
+            }else {
+                alert(result['msg']);
+            }
+            });
+
+    });
+    // 重新加载验证码
+    function loadcode(self) {
+        $(self).attr("src", ServerUrl+ "getCode?" + Math.random())
+    }
+</script>
+{% endblock %}

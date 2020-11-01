@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>{% block title %} {% endblock %}</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .left{float: left}
+        .right{float: right}
+        .clear{clear: both}
+        a{text-decoration: none}
+        a:hover{text-decoration: none}
+    </style>
+    {% block style %} {% endblock %}
+</head>
+
+<body>
+<div class="container">
+        <div class="row">
+            <div class="page-header">
+                <div style="float: left">
+                    <h1><a href="/index">公众号平台</a> <small>{% block subheader%}子标题{% endblock %}</small></h1>
+                <!-- Single button -->
+                </div>
+                <div class="btn-group" style="float: right;vertical-align:bottom">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        欢迎您,{% if session.logged_in %}{{ session.nick }}{% else %}请登录或注册 {% endif %}<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        {% if session.logged_in %}
+                            <li class="disabled"><a href="/login/login">登录 | 注册</a></li>
+                            {% if session.utype == 1 %}
+                                <li><a href="/articlemanage">我的公众号</a></li>
+                            {% else %}
+                                <li class="disabled"><a href="/articlemanage" >我的公众号</a></li>
+                            {% endif %}
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/logout">退出登录</a></li>
+                        {% else %}
+                            <li><a href="/login/login">登录 | 注册</a></li>
+                            <li class="disabled"><a href="/articlemanage">我的公众号</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="disabled"><a href="/logout">退出登录</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    {% block main %}
+    {% endblock %}
+</div>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="/static/js/bootstrap.min.js"></script>
+<script>
+    var ServerUrl = "http://127.0.0.1:5000/";
+    String.format = function() {
+			if (arguments.length == 0)
+				return null;
+			var str = arguments[0];
+			for ( var i = 1; i < arguments.length; i++) {
+				var re = new RegExp('\\{' + (i - 1) + '\\}', 'gm');
+				str = str.replace(re, arguments[i]);
+			}
+			return str;
+		};
+</script>
+{% block js %}
+{% endblock %}
+</body>
+</html>

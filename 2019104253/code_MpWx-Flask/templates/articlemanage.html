@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block title %}文章管理{% endblock %}
+{% block style %}
+    <style>
+        .date_w{width: 120px}
+        .media_b_w{width: 80%}
+        .media_b_b{border-bottom: 1px solid #EEEEEE; padding-bottom: 10px}
+    </style>
+{% endblock %}
+{% block subheader %}
+    文章管理
+{% endblock %}
+{% block main %}
+    <div class="panel panel-info">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+            <div style="float: left;"><h5><b>文章管理</b></h5></div>
+            <div style="float: right"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#publishArticle">发表文章</button></div>
+            <div style="clear: both"></div>
+        </div>
+        <!-- Table -->
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>标题</th>
+                <th>模板</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in datas %}
+                <tr>
+                <th scope="row">{{ loop.index }}</th>
+                <td><a href="/articledetail/{{ i.id }}">{{ i.title }}</a></td>
+                <td>{{ i.template }}</td>
+                <td><button type="button" class="btn btn-warning art_del" art_id="{{ i.id }}">删除</button></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal fade" id="publishArticle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">新文章</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" onsubmit="return checkpostdata()" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="article-title" class="control-label">文章标题：</label>
+                            <input type="text" class="form-control" id="article-title" name="article-title" placeholder="请输入文章标题!长度小于40个字符" maxlength="40">
+                        </div>
+                        <div class="form-group">
+                            <label for="article-title-img" class="control-label">标题图片(格式jpg,png,jpeg.像素小于200*200,文件大小小于1MB)</label>
+                            <input type="file" accept=".jpeg,.png,.jpg"  id="article-title-img" value="" name="article-title-img"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="article-source" class="control-label">文章来源：</label>
+                            <input type="text" class="form-control" id="article-source" name="article-source" placeholder="请输入文章来源,留空则为原创!">
+                        </div>
+                        <div class="form-group">
+                            <label for="article-template" class="control-label">选择文章模板：</label>
+                            <select class="form-control" name="article-template" id="article-template">
+                                <option value="1">粉色主题</option>
+                                <option value="2">黄色主题</option>
+                                <option value="3">绿色主题</option>
+                                <option value="4">蓝色主题</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="article-body-img" class="control-label">文章图片(格式jpg,png,jpeg.像素小于2000*2000,文件大小小于5MB)</label>
+                            <input type="file" accept=".jpeg,.png,.jpg"  id="article-body-img" value="" name="article-body-img"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="article-body-des" class="control-label">内容概述：</label>
+                            <textarea class="form-control" id="article-body-des" name="article-body-des" rows="2" placeholder="可为空,系统将自动截取文章前N个字符"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="article-body" class="control-label">文章内容：</label>
+                            <textarea class="form-control" id="article-body" name="article-body" rows="6"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">发表文章</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+    <script>
+        function checkpostdata() {
+            if ($('#article-title').val().trim() == "" || $('#article-body').val().trim() == "") {
+                alert("文章标题和内容不可为空!");
+                return false
+            }
+            console.log("提交了")
+        }
+
+    //删除文章
+    $(".art_del").click(function () {
+        var r = confirm("确认删除?");
+        if (r == true) {
+           var data = {'id': $(this).attr("art_id")};
+            $.post(ServerUrl + "delarticle",data,function(result){
+                if (result['code']=="1"){
+                    alert("删除成功!");
+                    window.location.reload();
+                }else {
+                    alert(result['msg']);
+                }
+            });
+        }
+    })
+    </script>
+{% endblock %}
