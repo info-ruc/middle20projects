@@ -20,6 +20,7 @@ from movielens_recommendation import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('getRec/', views.get_rec),
+    path('getRecMovie/', views.get_rec_movie),
+    # path('getRec/', views.get_rec),
     path('', views.hello, name='index'),
 ]
